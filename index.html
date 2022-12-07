@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+//creating  dom inputs
+ 
+ let no1=document.createElement('input');
+    no1.setAttribute('value','');
+	no1.setAttribute("type",'number');
+    no1.setAttribute("placeholder","enter no1");
+    no1.setAttribute("id","input1");
+ document.body.appendChild(no1);
+
+ 
+ 
+ let no2=document.createElement('input');
+     no2.setAttribute('value','');
+	 no2.setAttribute("type",'number');
+    no2.setAttribute("placeholder","enter no2");
+   no2.setAttribute("id","input2");
+ document.body.appendChild(no2);
+ 
+ 
+ let no3=document.createElement('input');
+   no3.setAttribute('value','');
+   no3.setAttribute("type",'number');
+  no3.setAttribute("placeholder","enter no3");
+   no3.setAttribute("id","input3");
+ document.body.appendChild(no3);
+ 
+ 
+  let no4=document.createElement('input');
+   no4.setAttribute('value','');
+   no4.setAttribute("type",'number');
+  no4.setAttribute("placeholder","enter no4");
+   no4.setAttribute("id","input4");
+ document.body.appendChild(no4);
+ 
+ 
+ //creating dom button
+ let btn=document.createElement("button");
+     btn.innerHTML="Assending";
+	 btn.setAttribute("id","btns");
+	 btn.setAttribute("type","submit");
+	 document.body.appendChild(btn);
+	 
+ btn.addEventListener("click",myFunction);
+ //creating dom p for showing results
+ let p=document.createElement("p");
+ p.setAttribute("id","result");
+ document.body.appendChild(p);
+ // assending function
+ function myFunction(){
+    let n1=parseInt(no1.value);
+	let n2=parseInt(no2.value);
+	let n3=parseInt(no3.value);
+	let n4=parseInt(no4.value);
+	
+ if(n1<n2&&n1<n3&&n1<n4){
+    if(n2<n3&&n2<n4){
+	  if(n3<n4){
+	    console.log(n1,n2,n3,n4);
+	  }
+	  else{
+	    console.log(n1,n2,n4,n3);
+	  }
+	}
+    else if (n3<n2&&n3<n4){
+	  if(n2<n4){
+	    console.log(n1,n3,n2,n4);
+	  }
+	  else{
+	    console.log(n1,n3,n4,n2);
+	  }
+	}
+	else{
+	  if(n2<n3){
+	    console.log(n1,n4,n2,n3);
+	  }
+	  else{
+	    console.log(n1,n4,n3,n2);
+	  }
+	}
+ }
+ 
+ //taking second no
+ 
+ else if(n2<n1&&n2<n3&&n2<n4){
+    if(n1<n3&&n1<n4){
+	  if(n3<n4){
+	    console.log(n2,n1,n3,n4);
+	  }
+	  else{
+	    console.log(n2,n1,n4,n3);
+	  }
+	}
+	else if (n3<n1&&n3<n4){
+	  if(n1<n4){
+	    console.log(n2,n3,n1,n4);
+	  }
+	  else{
+	    console.log(n2,n3,n4,n1);
+	  }
+	}
+	else{
+	  if(n1<n3){
+	    console.log(n2,n4,n1,n3);
+	  }
+	  else{
+	    console.log(n2,n4,n3,n1);
+	  }
+	}
+ }
+ 
+ //taking third no 
+ 
+  else if(n3<n1&&n3<n2&&n3<n4){
+    if(n1<n2&&n1<n4){
+	  if(n2<n4){
+	    console.log(n3,n1,n2,n4);
+	  }
+	  else{
+	    console.log(n3,n1,n4,n2);
+	  }
+	}
+	else if (n2<n1&&n2<n4){
+	  if(n1<n4){
+	    console.log(n3,n2,n1,n4);
+	  }
+	  else{
+	    console.log(n3,n2,n4,n1);
+	  }
+	}
+	else{
+	  if(n1<n2){
+	    console.log(n3,n4,n1,n2);
+	  }
+	  else{
+	    console.log(n3,n4,n2,n1);
+	  }
+	}
+ }
+ //taking fourth no
+   else {
+    if(n1<n2&&n1<n3){
+	  if(n2<n3){
+	    console.log(n4,n1,n2,n3);
+	  }
+	  else{
+	    console.log(n4,n1,n3,n2);
+	  }
+	}
+	else if (n2<n1&&n2<n3){
+	  if(n1<n3){
+	    console.log(n4,n2,n1,n3);
+	  }
+	  else{
+	    console.log(n4,n2,n3,n1);
+	  }
+	}
+	else{
+	  if(n1<n2){
+	    console.log(n4,n3,n1,n2);
+	  }
+	  else{
+	    console.log(n4,n3,n2,n1);
+	  }
+	}
+ }
+ }
+ 
+ 
+</script>
+
+</body>
+</html>
